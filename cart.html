@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone-Shop</title>
+    <!-- BS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar container navbar-expand-lg">
+            <a class="navbar-brand" href="#">Phone-Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link mr-5" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-5" href="#">About</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-5" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-5" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-5cart" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>1</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="cart container">
+        <h2 >Giỏ Hàng</h2>
+        <div class="cart__item">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Tổng</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="show__cart">
+                 
+                </tbody>
+            </table>
+            <div class="totle" style="padding: 10px;">Tổng: <span class="txtTotle">100</span></div>
+            <button type="button" class="btn btn-primary update m-2">Cập nhật</button>
+            <button type="button" class="btn btn-success pay">Thanh toán</button>
+        </div>
+
+    </section>
+
+    <!-- BS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script src="./Custormer/model/SanPham.js"></script>
+    <script src="./Custormer/services/SanPhamServies.js"></script>
+    <script src="./Custormer/controller/main.js"></script>
+</body>
+
+</html>
