@@ -1,0 +1,55 @@
+.cart {
+    padding: 70px 0;
+    color: black;
+    border: 1px solid #ddd;
+    box-shadow: 2px 4px 2px #ddd;
+    h2 {
+        margin-left: 20px
+    }
+    .cart__item {
+        // display: flex;
+        // flex-direction: row;
+        // align-items: center;
+
+        tbody {
+            .img {
+                width: 100px;
+                height: 100px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .name {
+                flex: 3;
+            }
+
+            .img,
+            .price,
+            .quantyti,
+            .totle,
+            .delete {
+                flex: 1;
+                margin-left: 20px;
+            }
+
+            .quantyti {
+                padding: 5px;
+            }
+
+            .delete i {
+                font-size: 20px;
+                &:hover {
+                    color: $color-2;
+                    cursor: pointer;
+                }
+            }
+
+            
+                border-bottom: 1px solid #ddd;
+            
+
+        }
+    }
+}

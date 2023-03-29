@@ -1,0 +1,16 @@
+.btnBuyProduct {
+    background: #f5f9fe;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 0.03rem;
+    font-size: $fs-1;
+    font-weight: $fs-2;
+    color: $color-2;
+    box-shadow: 2px 2px 4px #e2ebfc, -2px -2px 4px #fff;
+    transition: .5s;
+
+    &:hover {
+        box-shadow: inset 1px 1px 3px #e2ebfc, inset -2px -2px 5px #fff
+    }
+}

@@ -1,0 +1,56 @@
+.phone-carousel {
+    background-size: cover;
+    background-position: center bottom;
+    padding: 100px 0;
+
+    h1 {
+        font-size: 70px;
+        font-size: $fw-3;
+        color: $color-2;
+    }
+    h3{
+        font-weight: 1.6rem;
+        font-size: $fw-2;
+        color: $color-3;
+    }
+    p {
+        font-size: $fs-2;
+        font-weight: $fw-1;
+        color: $color-4;
+        margin-bottom: 25px;
+    }
+    .btnPhone-white {
+        background: transparent;
+        padding: 13.5px 44px;
+        border: 2px solid #ef4b4b;
+        border-radius: 8px;
+        letter-spacing: 0.03rem;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ef4b4b;
+        box-shadow: 0 3px 6px #c9d8f4;
+        transition: .5s;
+    }
+    .btnPhone-orange {
+        background: linear-gradient(120deg, #f06464, #ef4b4b);
+        padding: 15.5px 46px;
+        border: none;
+        border-radius: 8px;
+        letter-spacing: 0.03rem;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        transition: .5s;
+        &:hover {
+                opacity: 0.75;
+        }
+    }
+    img {
+        vertical-align: middle;
+        border-style: none;
+    }
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+}
