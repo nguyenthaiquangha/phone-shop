@@ -18,4 +18,11 @@ function ProductServices() {
             url: `https://64184a8175be53f451db32bc.mockapi.io/Products/${id}`,
         })
     }
+     // xóa sp
+    //  this.deleteProductSer = function (id) {
+    //     return axios({
+    //         method: 'delete',
+    //         url: `https://64184a8175be53f451db32bc.mockapi.io/Products/${id}`,
+    //     })
+    // }
 }

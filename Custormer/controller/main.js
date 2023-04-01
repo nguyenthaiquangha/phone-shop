@@ -41,7 +41,6 @@ function showProduct(arrayData) {
 const showProductList = () => {
     let axiosResult = productser.getProductList();
     axiosResult.then(function (response) {
-        console.log(response.data);
         showProduct(response.data);
     }).catch(function (error) {
         console.log(error);
@@ -49,21 +48,6 @@ const showProductList = () => {
 }
 showProductList();
 
-// render categories
-// const getCategory = (showProductList) => {
-//     //[samsung,iphone]
-//     const categories = {};
-
-//     for (let item of showProductList) {
-//         categories[item.type] = true
-//     }
-//     const rs = Object.keys(categories)
-//     return rs
-// }
-// const renderCategory = (showProductList) => {
-//     const categories = getCategory(showProductList());
-//     console.log(categories);
-// }
 
 // renderCategory(showProductList)
 
@@ -91,6 +75,9 @@ showProductList();
 // showCategory();
 
 
+
+
+
 // set localStorage
 const setLocalStorage = (mang) => {
     localStorage.setItem("Cart", JSON.stringify(mang));
@@ -100,51 +87,36 @@ let cartArr = []
 const addCart = (id) => {
     let pro = productser.getProductItem(id)
     pro.then((response) => {
-        console.log(response.data);
+        alert("Mua sản phẩm thành công");
         cartArr.push(response.data);
+        location.reload()
         setLocalStorage(cartArr)
     }).catch((error) => {
         console.log(error);
     })
 
 }
-// show giỏ hàng
-const showCart = () => {
-    let content = '';
-    let input = Number(document.querySelector('.quantyti')).value;
-    console.log(input);
-    cartArr.map((product) => {
-        content += `
-        <tbody>
-          <tr class="align-items-center">
-            <td class="img"><img src="${product.img}" alt=""></td>
-            <td class="name">${product.name}</td>
-            <td class="price">${product.price}</td>
-            <td><input type="number" value="1" class="quantyti"></td>
-            <td>${input*product.price}</td>
-            <td><i class="fa-solid fa-trash"></i></td>   
-          </tr>
 
-        `
-    })
-    document.querySelector('.show__cart').innerHTML = content;
-}
+
 // lấy sản phẩm từ localStorage
 function getLocalStorage() {
     if (localStorage.getItem("Cart") != null) {
         cartArr = JSON.parse(localStorage.getItem("Cart"));
-        showCart(cartArr)
+        // showCart(cartArr)
     }
 }
 getLocalStorage();
-// thanh toán
-const btnPay = document.querySelector('.pay')
-btnPay.addEventListener('click',() => {
-    if (localStorage.getItem("Cart") != null) {
-        alert("thanh toán thành công");
-        localStorage.removeItem("Cart");
-        location.reload();
-    }else{
-        alert("Không có sản phẩm trong giỏ hàng");
+
+// lấy số lượng sản phẩm để hiển thị lên icon
+const showQtt = () => {
+    let cart = JSON.parse(localStorage.getItem("Cart"));
+    if (localStorage.getItem('Cart') != null) {
+        document.querySelector('.txtQtt').innerHTML = cart.length;
+    } else {
+        document.querySelector('.txtQtt').innerHTML = 0;
     }
-})
+
+}
+showQtt();
+
+
