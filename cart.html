@@ -21,7 +21,7 @@
 
     <header>
         <nav class="navbar container navbar-expand-lg">
-            <a class="navbar-brand" href="#">Phone-Shop</a>
+            <a class="navbar-brand" href="index.html">Phone-Shop</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
@@ -43,7 +43,7 @@
                     <li class="nav-item ">
                         <a class="nav-link mr-5cart" href="cart.html">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <span>1</span>
+                            <span class="txtQuantyti">1</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -55,26 +55,25 @@
         </nav>
     </header>
     <section class="cart container">
-        <h2 >Giỏ Hàng</h2>
+        <h2>Giỏ Hàng</h2>
         <div class="cart__item">
             <table class="table">
                 <thead>
-                  <tr>
-                    <th scope="col">Hình ảnh</th>
-                    <th scope="col">Tên</th>
-                    <th scope="col">Giá</th>
-                    <th scope="col">Số lượng</th>
-                    <th scope="col">Tổng</th>
-                    <th scope="col">Action</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Tên</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Tổng</th>
+                        <th scope="col">Action</th>
+                    </tr>
                 </thead>
                 <tbody class="show__cart">
-                 
+
                 </tbody>
             </table>
-            <div class="totle" style="padding: 10px;">Tổng: <span class="txtTotle">100</span></div>
-            <button type="button" class="btn btn-primary update m-2">Cập nhật</button>
-            <button type="button" class="btn btn-success pay">Thanh toán</button>
+            <div class="totle ml-3 p-2">Tổng tiền phải trả: <span class="txtTotle"></span></div>
+            <button type="button" class="btn btn-success pay ml-3">Thanh toán</button>
         </div>
 
     </section>
@@ -91,7 +90,7 @@
 
     <script src="./Custormer/model/SanPham.js"></script>
     <script src="./Custormer/services/SanPhamServies.js"></script>
-    <script src="./Custormer/controller/main.js"></script>
+    <script src="./Custormer/controller/cart.js"></script>
 </body>
 
 </html>
